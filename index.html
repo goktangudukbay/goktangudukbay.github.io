@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mustafa Goktan Gudukbay - Personal Website</title>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4; /* Light grey background */
+      color: #000; /* Black text */
+    }
+    header {
+      background-color: #333; /* Dark header for contrast */
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin: 10px 0 0;
+    }
+
+    nav {
+      text-align: center;
+      background: #444;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #ddd;
+    }
+
+    main {
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff; /* White background for content */
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background-color: #f4f4f4; /* Same light grey background */
+      border-right: 2px solid #ddd;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      background-color: #f0f0f0; /* Light grey background */
+      color: #000;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      border-radius: 5px;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+    }
+
+    .photo-section {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-align: center;
+    }
+    .photo-section img {
+      border-radius: 10px;
+      max-width: 150px;
+      border: 4px solid #ddd;
+    }
+
+    .content-section {
+      flex: 3;
+      padding: 20px;
+      background: #fff; /* White content background */
+      color: #000; /* Black text */
+    }
+
+    section {
+      margin-bottom: 30px;
+      background-color: #fff; /* White background for sections */
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #000;
+      font-size: 1.5em;
+      margin-top: 0;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project-box, .work-box {
+      background-color: #f9f9f9; /* Lighter background for boxes */
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-box h3, .work-box h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+
+    .project-box p, .work-box p {
+      font-size: 1em;
+      color: #555; /* Darker grey text for readability */
+    }
+
+    .external-links {
+      background-color: #f0f0f0; /* Light grey background */
+      padding: 5px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 200px; /* Smaller width for external links */
+      margin: 10px auto;
+    }
+
+    .external-links a {
+      color: black; /* Black text for links */
+      background-color: #ddd; /* Light grey background for links */
+      text-decoration: none;
+      padding: 8px;
+      margin: 5px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .external-links a:hover {
+      background-color: #ccc; /* Darker grey when hovered */
+    }
+
+    #publications ul li,
+    .work-experience ul li {
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: #f9f9f9; /* Lighter grey background */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .work-experience ul li strong {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+
+    #publications ul li em {
+      font-style: italic;
+      color: #555;
+    }
+
+    #publications h2 {
+      font-size: 1.7em;
+      color: #000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    
+    .sidebar .fa {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mustafa Goktan Gudukbay</h1>
+    <p>Ph.D. Candidate | Computer Science and Engineering</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#future-interests">Future Interests</a>
+    <a href="#work-experience">Work Experience</a>
+  </nav>
+
+  <main>
+    <div class="sidebar">
+        <a style="display: flex; align-items: center; text-decoration: none; color: black;">
+            <i class="fas fa-envelope" style="margin-right: 8px;"></i> 
+            bupsgoktangudukbay@gmail.com
+        </a>
+        <a href="https://github.com/goktangudukbay" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://scholar.google.com/citations?user=PSHS-ZQAAAAJ&hl=en" target="_blank">
+          <i class="fas fa-book"></i> Google Scholar
+        </a>
+        <a href="https://www.linkedin.com/in/göktan-güdükbay-107a27178/" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="your-cv.pdf" target="_blank">
+          <i class="fas fa-file-pdf"></i> View CV (PDF)
+        </a>
+    </div>
+
+    <div class="photo-section">
+      <img src="photo.jpeg" alt="Mustafa Goktan Gudukbay's Photo">
+    </div>
+
+    <div class="content-section">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I am a Computer Science and Engineering Ph.D. student at The Pennsylvania State University. My research focuses on improving deep learning inference for autonomous driving, with an emphasis on speed and energy efficiency, scheduling optimizations. Previously, I worked on portrait drawing using Generative Adversarial Networks (GANs). Outside of research, I enjoy exploring advancements in immersive technologies and optimization techniques.</p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-box">
+          <h3>Current Research</h3>
+          <p>Enhancing the perception pipeline for autonomous driving, optimizing real-time performance to meet strict deadlines in both 2D and 3D detection tasks. My work includes exploring sensor fusion and efficient scheduling strategies for multiple deep learning models in real-time systems. I am using the Autoware simulator together with AWSIM to explore ideas on pipeline optimization and inference scheduling.</p>
+        </div>
+
+        <div class="project-box">
+          <h3>AR/VR Pipeline Exploration</h3>
+          <p>Improved performance features for immersive experiences. This work involved optimizing rendering and processing pipelines, specifically focusing on the effect of camera orientation on Asynchronous Timewarp (ATW) using the ILLIXR testbed to reduce latency and improve visual consistency.</p>
+        </div>
+
+        <div class="project-box">
+          <h3>Portrait Drawing with GANs</h3>
+          <p>Developed unsupervised learning techniques to train a Generative Adversarial Network (GAN) to draw portraits. The model was trained on various datasets to understand artistic features and create lifelike representations.</p>
+        </div>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>
+            <strong>Burak Tasdemir, Mustafa Goktan Gudukbay, Dogac Eldenk, Adil Meric, and Aysegul Dundar.</strong>
+            <em>"Learning Portrait Drawing with Unsupervised Parts."</em><strong> International Journal of Computer Vision</strong>, April 2024.
+          </li>
+        </ul>
+      </section>
+
+      <section id="future-interests">
+        <h2>Future Interests</h2>
+        <ul>
+          <li>Optimizing real-time performance for autonomous driving systems.</li>
+          <li>Advancing scheduling strategies for deep learning tasks.</li>
+          <li>Exploring rendering techniques for dynamic and immersive environments.</li>
+        </ul>
+      </section>
+
+      <section id="work-experience" class="work-experience">
+        <h2>Work Experience</h2>
+        <ul>
+          <li><strong>Teaching Assistant</strong>
+            <ul>
+              <li><strong>CMPSC 473 - Operating Systems</strong> (Fall 2023, Spring 2024)
+                <p>Assisted in grading, project preparation, and tutoring students on operating system concepts, including memory management, process scheduling, and file systems.</p>
+              </li>
+              <li><strong>CMPSC 311 - Systems Programming</strong> (Fall 2024)
+                <p>Assisted in grading, project preparation, and teaching systems programming concepts, including C/C++ programming, memory management, and low-level system architecture.</p>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Research Intern</strong> at Microsoft Corporation (Summer 2024)
+            <p>Analyzed Large Language Model (LLM) performance and improved inference speed using Python, PyTorch, ONNX, and CUDA. Implemented optimization strategies to enhance model efficiency.</p>
+          </li>
+          <li><strong>Software Engineer Intern</strong> at Siyah AR-GE (Summer 2021)
+            <p>Developed client-server applications using C++ and implemented message queues with shared memory on Windows.</p>
+          </li>
+          <li><strong>Software Developer Intern</strong> at SRDC (Summer 2020)
+            <p>Built user management and messaging applications with tools like PostgreSQL, Spring, REST APIs, and the MEAN stack.</p>
+          </li>
+        </ul>
+      </section>    
+    </div>
+  </main>
+</body>
+</html>
